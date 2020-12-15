@@ -48,7 +48,7 @@
 ### Association
 
 - belong_to :user
-- belong_to :products
+- belong_to :product
 - has_one :address
 
 
