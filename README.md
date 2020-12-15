@@ -11,7 +11,7 @@
 | email               | string | null: false,unique: true |
 | encrypted_password  | string | null: false              |
 | nickname            | string | null: false,unique: true |
-| birthday_date       | string | null: false              |
+| birthday_date       | date   | null: false              |
 
 ### Association
 
@@ -24,11 +24,11 @@
 | Columu          | Type       | Options                       |
 | --------------- | ------     | ----------------------------- |
 | user            | references | null: false,foreign_key: true |
-| products name   | string     | null: false                   |
+| products_name   | string     | null: false                   |
 | text            | text       | null: false                   |
 | category_id     | integer    | null: false                   |
 | state_id        | integer    | null: false                   |
-| delivery fee_id | integer    | null: false                   |
+| delivery_fee_id | integer    | null: false                   |
 | area_id         | integer    | null: false                   |
 | days_id         | integer    | null: false                   |
 | price           | integer    | null: false                   |
@@ -36,17 +36,19 @@
 ### Association
 
 - belong_to :user
+- has_one :purchase_record
 
-## purchase record テーブル
+## purchase_record テーブル
 
 | Columu         | Type       | Options                       |
 | -------------- | ---------- | ----------------------------- |
 | user           | references | null: false,foreign_key: true |
-| products       | references | null: false,foreign_key: true |
+| product        | references | null: false,foreign_key: true |
 
 ### Association
 
-- belong_to :users
+- belong_to :user
+- has_one :products
 - has_one :address
 
 
@@ -54,14 +56,14 @@
 
 | Columu         | Type       | Options                       |
 | -------------- | ---------- | ----------------------------- |
-| zip code       | string     | null: false                   |
+| zip_code       | string     | null: false                   |
 | area_id        | integer    | null: false                   |
 | city           | string     | null: false                   |
-| street number  | string     | null: false                   |
-| building name  | string     |                               |
-| phone number   | string     | null: false                   |
-| products       | references | null: false,foreign_key: true |
+| street_number  | string     | null: false                   |
+| building_name  | string     |                               |
+| phone_number   | string     | null: false                   |
+| product        | references | null: false,foreign_key: true |
 
 ### Association
 
-- belong_to :purchase record
+- belong_to :purchase_record
