@@ -2,13 +2,16 @@
 
 ## users テーブル
 
-| Columu   | Type   | Options                  |
-| -------- | ------ | ------------------------ |
-| username | string | null: false              |
-| email    | string | null: false,unique: true |
-| password | string | null: false              |
-| nickname | string | null: false,unique: true |
-| birthday | string | null: false              |
+| Columu             | Type   | Options                  |
+| ------------------ | ------ | ------------------------ |
+| first name         | string | null: false              |
+| last name          | string | null: false              |
+| first name frigana | string | null: false              |
+| last name frigana  | string | null: false              |
+| email              | string | null: false,unique: true |
+| encrypted_password | string | null: false              |
+| nickname           | string | null: false,unique: true |
+| birthday DATE      | string | null: false              |
 
 ### Association
 
@@ -18,18 +21,17 @@
 
 ## products テーブル
 
-| Columu        | Type       | Options                       |
-| ------------- | ------     | ----------------------------- |
-| username      | references | null: false,foreign_key: true |
-| images        | string     | null: false                   |
-| products name | string     | null: false                   |
-| text          | string     | null: false                   |
-| category      | string     | null: false                   |
-| state         | string     | null: false                   |
-| delivery fee  | string     | null: false                   |
-| area          | string     | null: false                   |
-| days          | string     | null: false                   |
-| price         | string     | null: false                   |
+| Columu          | Type       | Options                       |
+| --------------- | ------     | ----------------------------- |
+| user            | references | null: false,foreign_key: true |
+| products name   | string     | null: false                   |
+| text            | string     | null: false                   |
+| category_id     | string     | null: false                   |
+| state_id        | string     | null: false                   |
+| delivery fee_id | string     | null: false                   |
+| area_id         | string     | null: false                   |
+| days_id         | string     | null: false                   |
+| price_id        | string     | null: false                   |
 
 ### Association
 
@@ -39,15 +41,13 @@
 
 | Columu         | Type       | Options                       |
 | -------------- | ---------- | ----------------------------- |
-| security code  | string     | null: false                   |
-| credit number  | string     | null: false,unique: true      |
-| expration date | string     | null: false                   |
-| username       | references | null: false,foreign_key: true |
+| user           | references | null: false,foreign_key: true |
+| products       | references | null: false,foreign_key: true |
 
 ### Association
 
 - belong_to :users
-- has_many :address
+- has_one :address
 
 
 ## address テーブル
@@ -55,12 +55,12 @@
 | Columu         | Type       | Options                       |
 | -------------- | ---------- | ----------------------------- |
 | zip code       | string     | null: false                   |
-| prefecture     | string     | null: false                   |
+| area_id        | string     | null: false                   |
 | city           | string     | null: false                   |
 | street number  | string     | null: false                   |
-| building name  | string     | null: false                   |
+| building name  | string     |                               |
 | phone number   | string     | null: false                   |
-| username       | references | null: false,foreign_key: true |
+| products       | references | null: false,foreign_key: true |
 
 ### Association
 
