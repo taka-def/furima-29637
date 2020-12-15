@@ -48,21 +48,21 @@
 ### Association
 
 - belong_to :user
-- has_one :products
+- belong_to :products
 - has_one :address
 
 
 ## address テーブル
 
-| Columu         | Type       | Options                       |
-| -------------- | ---------- | ----------------------------- |
-| zip_code       | string     | null: false                   |
-| area_id        | integer    | null: false                   |
-| city           | string     | null: false                   |
-| street_number  | string     | null: false                   |
-| building_name  | string     |                               |
-| phone_number   | string     | null: false                   |
-| product        | references | null: false,foreign_key: true |
+| Columu          | Type       | Options                       |
+| --------------- | ---------- | ----------------------------- |
+| zip_code        | string     | null: false                   |
+| area_id         | integer    | null: false                   |
+| city            | string     | null: false                   |
+| street_number   | string     | null: false                   |
+| building_name   | string     |                               |
+| phone_number    | string     | null: false                   |
+| purchase_record | references | null: false,foreign_key: true |
 
 ### Association
 
