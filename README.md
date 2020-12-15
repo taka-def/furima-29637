@@ -11,7 +11,7 @@
 | email               | string | null: false,unique: true |
 | encrypted_password  | string | null: false              |
 | nickname            | string | null: false,unique: true |
-| birthday DATE       | string | null: false              |
+| birthday_date       | string | null: false              |
 
 ### Association
 
@@ -25,13 +25,13 @@
 | --------------- | ------     | ----------------------------- |
 | user            | references | null: false,foreign_key: true |
 | products name   | string     | null: false                   |
-| text            | string     | null: false                   |
+| text            | text       | null: false                   |
 | category_id     | integer    | null: false                   |
 | state_id        | integer    | null: false                   |
 | delivery fee_id | integer    | null: false                   |
 | area_id         | integer    | null: false                   |
 | days_id         | integer    | null: false                   |
-| price_id        | integer    | null: false                   |
+| price           | integer    | null: false                   |
 
 ### Association
 
