@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2020-12-15T11:35:58.163Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.0 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" version="13.10.0" etag="reo_5tjJWbGpMG7hZjvr" type="embed">
+<mxfile host="65bd71144e" modified="2020-12-15T11:37:12.579Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.0 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" version="13.10.0" etag="3MPm7HRrlDM14kQwPg7x" type="embed">
     <diagram id="k4KtDIAqs9XxSUxfN8hh" name="ページ1">
         <mxGraphModel dx="876" dy="686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -35,10 +35,10 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="pGCqx2mr7sNg4LEyve4I-56" value="address" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
-                    <mxGeometry x="432" y="394" width="160" height="230" as="geometry"/>
+                    <mxGeometry x="432" y="394" width="160" height="250" as="geometry"/>
                 </mxCell>
-                <mxCell id="pGCqx2mr7sNg4LEyve4I-57" value="username&#10;&#10;zip code&#10;&#10;prefecture&#10;&#10;city&#10;&#10;street number&#10;&#10;building name&#10;&#10;phone number" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="pGCqx2mr7sNg4LEyve4I-56">
-                    <mxGeometry y="26" width="160" height="204" as="geometry"/>
+                <mxCell id="pGCqx2mr7sNg4LEyve4I-57" value="&#10;zip_code&#10;&#10;area_id&#10;&#10;city&#10;&#10;street_ number&#10;&#10;building_ name&#10;&#10;phone_ number&#10;&#10;puchase record" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="pGCqx2mr7sNg4LEyve4I-56">
+                    <mxGeometry y="26" width="160" height="224" as="geometry"/>
                 </mxCell>
                 <mxCell id="pGCqx2mr7sNg4LEyve4I-62" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;strokeColor=#000000;rounded=0;" edge="1" parent="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
