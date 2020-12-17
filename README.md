@@ -6,8 +6,8 @@
 | ------------------- | ------ | ------------------------ |
 | first_name          | string | null: false              |
 | last_name           | string | null: false              |
-| first_ name_frigana | string | null: false              |
-| last_name_frigana   | string | null: false              |
+| first_ name_kana    | string | null: false              |
+| last_name_kana      | string | null: false              |
 | email               | string | null: false,unique: true |
 | encrypted_password  | string | null: false              |
 | nickname            | string | null: false,unique: true |
