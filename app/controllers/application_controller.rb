@@ -10,9 +10,6 @@ class ApplicationController < ActionController::Base
   def basic_auth
     authenticate_or_request_with_http_basic do |username, password|
       username == ENV["BASIC_AUTH_USER"] && password == ENV["BASIC_AUTH_PASSWORD"]
-  end
-
-  def product_params
-    params.require(:product).permit(:content, :image).merge(user_id: current_user.id)
+    end
   end
 end
