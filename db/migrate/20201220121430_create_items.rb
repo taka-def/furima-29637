@@ -1,6 +1,6 @@
-class CreateProducts < ActiveRecord::Migration[6.0]
+class CreateItems < ActiveRecord::Migration[6.0]
   def change
-    create_table :products do |t|
+    create_table :items do |t|
       t.references :user,                null: false, foreign_key: true 
       t.string :products_name,           null: false, default: ""
       t.text :text,                      null: false 
@@ -8,7 +8,7 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.integer :state_id,               null: false
       t.integer :delivery_fee_id,        null: false
       t.integer :area_id,                null: false
-      t.integer :days_id,                null: false
+      t.integer :day_id,                 null: false
       t.integer :price,                  null: false
       t.timestamps
     end
