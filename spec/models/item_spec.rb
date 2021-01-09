@@ -43,8 +43,18 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include "State can't be blank"
       end
+      it "商品の状態が1だと登録できない" do
+        @item.state_id = 1
+        @item.valid?
+        expect(@item.errors.full_messages).to include "State can't be blank"
+      end
       it "配送料の負担が空だと登録できない" do
         @item.delivery_fee_id = ""
+        @item.valid?
+        expect(@item.errors.full_messages).to include "Delivery fee can't be blank"
+      end
+      it "配送料の負担が1だと登録できない" do
+        @item.delivery_fee_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include "Delivery fee can't be blank"
       end
@@ -53,8 +63,18 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include "Area can't be blank"
       end
+      it "発送元の地域が1だと登録できない" do
+        @item.area_id = 1
+        @item.valid?
+        expect(@item.errors.full_messages).to include "Area can't be blank"
+      end
       it "発送までの日数が空だと登録できない" do
         @item.day_id = ""
+        @item.valid?
+        expect(@item.errors.full_messages).to include "Day can't be blank"
+      end
+      it "発送までの日数が1だと登録できない" do
+        @item.day_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include "Day can't be blank"
       end
