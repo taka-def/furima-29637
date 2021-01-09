@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-   before_action :move_to_signed_in, except: [:index]
+   before_action :authenticate_user!
  def index
  end
 
@@ -21,10 +21,4 @@ class ItemsController < ApplicationController
  def item_params
   params.require(:item).permit(:image,:day_id,:products_name,:text,:category_id,:state_id,:delivery_fee_id,:area_id,:price).merge(user_id: current_user.id)
  end
-
- def move_to_signed_in
-   unless user_signed_in?
-     redirect_to  '/users/sign_in'
- end
-end
 end
