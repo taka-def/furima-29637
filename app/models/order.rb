@@ -1,8 +1,9 @@
 class Order
   include ActiveModel::Model
-  attr_accessor :zip_code, :area_id, :city, :street_number, :building_name, :phone_number, :purchase_record_id, :user_id, :item_id
+  attr_accessor :token, :zip_code, :area_id, :city, :street_number, :building_name, :phone_number, :purchase_record_id, :user_id, :item_id
 
   with_options presence: true do
+    validates :token
     validates :user_id
     validates :item_id
     validates :zip_code, format: { with: /\A\d{3}[-]\d{4}\z/, message: "Zip code input correctly" }
