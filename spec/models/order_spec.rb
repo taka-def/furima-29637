@@ -31,6 +31,11 @@ RSpec.describe Order, type: :model do
           @order.valid?
           expect(@order.errors.full_messages).to include "Area can't be blank"
         end
+        it "area_idが1だと登録できない" do
+          @order.area_id = 1
+          @order.valid?
+          expect(@order.errors.full_messages).to include "Area can't be blank"
+        end
         it "cityが空だと登録できない" do
           @order.city = ""
           @order.valid?
@@ -60,6 +65,16 @@ RSpec.describe Order, type: :model do
           @order.token = nil
           @order.valid?
           expect(@order.errors.full_messages).to include "Token can't be blank"
+        end
+        it "use_idが空では登録できない" do
+          @order.user_id = nil
+          @order.valid?
+          expect(@order.errors.full_messages).to include "User can't be blank"
+        end
+        it "item_idが空では登録できない" do
+          @order.item_id = nil
+          @order.valid?
+          expect(@order.errors.full_messages).to include "Item can't be blank"
         end
         
      end
