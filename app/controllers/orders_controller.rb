@@ -1,9 +1,10 @@
 class OrdersController < ApplicationController
-
+  before_action :authenticate_user!, only: [:index]
   before_action :select_order, only: [:index, :create]
 
   def index
     @order = Order.new
+    redirect_to root_path if current_user == @item.user && if @item.purchase_record.present
     # フォームオブジェクトなのでアクティブレコードは使えない
   end
 
