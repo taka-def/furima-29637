@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
 
   def index
     @order = Order.new
-    redirect_to root_path if current_user == @item.user && if @item.purchase_record.present
+    redirect_to root_path if current_user == @item.user &&  @item.purchase_record.present
     # フォームオブジェクトなのでアクティブレコードは使えない
   end
 
@@ -18,9 +18,6 @@ class OrdersController < ApplicationController
      else
       render :index
     end
-
-
-
   end
 
   private
